@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Detail</title>
+</head>
+<body>
+	<h1>Detail</h1>
+	<a href="/">HomePage</a>
+	<hr>
+
+	<span th:text="${todo.title}"></span>
+	<span th:text="${todo.content}"></span>
+	<span th:text="${todo.complete}"></span>
+	<br>
+	<a th:href="@{/{id}/edit(id=${todo.id})}">Edit</a>
+	<a th:href="@{/{id}/delete(id=${todo.id})}">Delete</a>
+</body>
+</html>
